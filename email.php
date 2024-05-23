@@ -15,7 +15,7 @@ $message = $_POST['message'];
 
 if (empty($email) || empty($firstName) || empty($message)) {
     echo "All form fields are required.";
-    exit;
+    header('location: index.html');
 }
 
 $mail = new PHPMailer(true);
